@@ -14,7 +14,7 @@ export interface RoleBlock {
 export const theRoleBlocks: RoleBlock[] = [
   {
     label: 'What You Would Be Making',
-    text: 'You will essentially spearhead the entire artistic direction for the game. Currently we need 4 types of assets. Sprite Sheets, Tilesets, Cutscene Images and Talking Heads.',
+    text: 'You will spearhead the entire artistic direction for the game. Currently we need 4 types of assets. Sprite Sheets, Tilesets, Cutscene Images and Talking Heads.',
     subItems: [
       {
         label: 'Sprite Sheets',
@@ -30,13 +30,13 @@ export const theRoleBlocks: RoleBlock[] = [
       },
       {
         label: 'Cutscenes',
-        text: 'Key story beats are delivered through illustrated cutscene panels rather than real-time animation (I know how painful animation is).',
+        text: 'Key story beats are delivered through illustrated panels, a deliberate choice that keeps scope realistic and lets the art breathe.',
         imageSrc: '/role/cutscenes.jpg',
         imageLabel: 'Cutscene panel example',
       },
       {
         label: 'Talking Heads',
-        text: 'Talking Heads are the images that display when a character is talking. (For the purposes of the demo, I dont expect this degree of detail)',
+        text: 'Talking Heads are the images that display when a character is talking. (For the purposes of the demo, I don\'t expect this degree of detail)',
         imageSrc: '/role/talking-heads.png',
         imageLabel: 'Talking head example',
       },

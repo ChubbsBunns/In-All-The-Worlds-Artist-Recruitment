@@ -22,7 +22,7 @@ export function MoodBoardSection() {
     <Box component="section" id="moodboard" py="5rem">
       <Container size="lg">
         <Title order={2} ta="center" mb="md">
-          The Worlds (Mood Board for The In Between)
+          The In-Between (Current World in Development)
         </Title>
 
         <Text ta="center" c="dimmed" maw={680} mx="auto" mb="xl">
