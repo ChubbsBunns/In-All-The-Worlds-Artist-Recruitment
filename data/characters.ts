@@ -1,12 +1,46 @@
-export interface RoleBlock {
+export interface RoleSubItem {
   label: string;
   text: string;
+  imageSrc?: string;
+  imageLabel: string;
+}
+
+export interface RoleBlock {
+  label: string;
+  text?: string;
+  subItems?: RoleSubItem[];
 }
 
 export const theRoleBlocks: RoleBlock[] = [
   {
     label: 'What You Would Be Making',
-    text: 'Character sprites for four playable characters with full animation sets, enemy designs, environment tilesets, and world backgrounds. Each character needs to read clearly at a small sprite size while still carrying emotional weight across idle states, combat states, and the specific moments the story asks for. The prologue covers two distinct environments and a boss arena.',
+    text: 'You will essentially spearhead the entire artistic direction for the game. Currently we need 4 types of assets. Sprite Sheets, Tilesets, Cutscene Images and Talking Heads.',
+    subItems: [
+      {
+        label: 'Sprite Sheets',
+        text: 'Each of the four playable characters, alongside enemies need full animation set: idle, walk, run, attack states, hit reactions, death, and other specifics to be shared after reaching out.',
+        imageSrc: '/role/sprite-sheets.png',
+        imageLabel: 'Sprite sheet example',
+      },
+      {
+        label: 'Tilesets',
+        text: 'The prologue spans just one environment plus a boss arena. Each world after that can be worked on afterwards should the demo be completed.',
+        imageSrc: '/role/tilesets.png',
+        imageLabel: 'Tileset example',
+      },
+      {
+        label: 'Cutscenes',
+        text: 'Key story beats are delivered through illustrated cutscene panels rather than real-time animation (I know how painful animation is).',
+        imageSrc: '/role/cutscenes.jpg',
+        imageLabel: 'Cutscene panel example',
+      },
+      {
+        label: 'Talking Heads',
+        text: 'Talking Heads are the images that display when a character is talking. (For the purposes of the demo, I dont expect this degree of detail)',
+        imageSrc: '/role/talking-heads.png',
+        imageLabel: 'Talking head example',
+      },
+    ],
   },
   {
     label: 'Scope',
@@ -20,6 +54,18 @@ export const theRoleBlocks: RoleBlock[] = [
     label: 'How to Apply',
     text: 'Use the contact form below. Include a link to your portfolio and a short note about what drew you to the project. That is enough to start a conversation.',
   },
+];
+
+export interface SocialLink {
+  id: number;
+  name: string;
+  href: string;
+  imgSrc?: string;
+}
+
+export const socialLinks: SocialLink[] = [
+  { id: 1, name: 'Twitter / X', href: '#', imgSrc: '/social/twitter.svg' },
+  { id: 2, name: 'Discord', href: '#', imgSrc: '/social/discord.svg' },
 ];
 
 export interface Character {

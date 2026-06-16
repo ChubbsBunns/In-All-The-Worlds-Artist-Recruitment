@@ -16,9 +16,9 @@ import {
 } from '@mantine/core';
 
 const navLinks = [
-  { label: 'Story', id: 'synopsis' },
+  { label: 'The Game', id: 'synopsis' },
   { label: 'Characters', id: 'characters' },
-  { label: 'Art Direction', id: 'moodboard' },
+  { label: 'Environment Moodboard', id: 'moodboard' },
   { label: 'The Role', id: 'the-role' },
 ];
 

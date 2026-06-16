@@ -6,14 +6,14 @@ export function ContactSection() {
       <Container size="sm">
         <Stack align="center" gap="lg" style={{ textAlign: 'center' }}>
           <Title order={2}>
-            Let&apos;s Make Something
+            Let&apos;s Make Something, Email me at dylanhoshujie@gmail.com
           </Title>
           <Text size="lg" c="dimmed">
-            If this world feels like yours to draw, reach out. A link to your work and a few words about what you saw here is all it takes.
+            If something here caught you, I'd love to see what you've been making. Send a portfolio link and whatever feels relevant. <br/> My email is <b>dylanhoshujie@gmail.com</b>
           </Text>
           <Button
             component="a"
-            href="mailto:troskproductions@gmail.com"
+            href="mailto:dylanhoshujie@gmail.com"
             size="lg"
           >
             Get in Touch
