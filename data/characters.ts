@@ -130,7 +130,7 @@ export const characters: Character[] = [
     cardImage: '/character_header/squibbles_character_profile.png',
     detailImages: ['/character_cards/squibbles/squibbles_char_card.jpg', '/character_cards/squibbles/squibbles_char_card2.png'],
     shortDescription:
-      'He built the city\'s bones. The city has no idea.',
+      'His technology runs the city. The same city that spits at him.',
     detailDescription:
       '[SQUIBBLES DETAIL TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     characterText:
