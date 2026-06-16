@@ -79,7 +79,7 @@ export function HeroSection() {
           In All The Worlds
         </Title>
         <Text size="xl" style={{ color: 'rgba(255,255,255,0.85)', textShadow: '0 1px 8px rgba(0,0,0,0.65)', fontFamily: 'var(--font-cinzel), serif' }}>
-          The worlds are written. They're not yet drawn. That's where you come in.
+          The worlds are written, but not yet drawn. That's where you come in.
         </Text>
       </Stack>
     </Box>

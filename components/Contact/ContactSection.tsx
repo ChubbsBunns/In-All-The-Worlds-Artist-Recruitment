@@ -6,18 +6,17 @@ export function ContactSection() {
       <Container size="sm">
         <Stack align="center" gap="lg" style={{ textAlign: 'center' }}>
           <Title order={2}>
-            [CONTACT HEADING TODO] Let&apos;s Make Something
+            Let&apos;s Make Something
           </Title>
           <Text size="lg" c="dimmed">
-            [CONTACT SUBTEXT TODO] Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. If this world resonates with you, get in touch.
+            If this world feels like yours to draw, reach out. A link to your work and a few words about what you saw here is all it takes.
           </Text>
           <Button
             component="a"
             href="mailto:troskproductions@gmail.com"
             size="lg"
           >
-            [CONTACT BUTTON TODO] Get in Touch
+            Get in Touch
           </Button>
         </Stack>
       </Container>

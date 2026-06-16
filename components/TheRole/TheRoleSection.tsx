@@ -7,7 +7,7 @@ export function TheRoleSection() {
       <Container size="sm">
         <Stack gap="xl">
           <Title order={2} ta="center">
-            [ROLE HEADING TODO] The Role
+            The Role
           </Title>
           {theRoleBlocks.map(({ label, text }, i) => (
             <Stack key={i} gap="xs">

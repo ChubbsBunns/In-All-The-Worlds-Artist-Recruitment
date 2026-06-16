@@ -5,24 +5,20 @@ export interface RoleBlock {
 
 export const theRoleBlocks: RoleBlock[] = [
   {
-    label: 'About the Dev',
-    text: '[ABOUT DEV TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    label: 'What You Would Be Making',
+    text: 'Character sprites for four playable characters with full animation sets, enemy designs, environment tilesets, and world backgrounds. Each character needs to read clearly at a small sprite size while still carrying emotional weight across idle states, combat states, and the specific moments the story asks for. The prologue covers two distinct environments and a boss arena.',
   },
   {
-    label: 'Project State',
-    text: '[PROJECT STATE TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    label: 'Scope',
+    text: 'The immediate focus is a playable prologue demo, tight in scope and built to establish the game\'s world and tone. Once the demo is complete, production moves into Act 1: Auren, an Asian-influenced island city built on an archipelago and lit by lanterns and warm gold light. Three full acts follow after that, each with its own world and visual identity.',
   },
   {
-    label: 'Creative Scope',
-    text: '[SCOPE TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    label: 'Style Direction',
+    text: 'The reference points are Crypt Custodian as a grounded baseline and Spiritfarer as the emotional aspiration. Both are non-pixel-art 2D, and so is the target for this game. Beyond that, these are reference points rather than requirements. What matters most is warmth, emotional readability, and a style that can carry a story. If your work lives in a similar register without matching those games, feel free to reach out too.',
   },
   {
-    label: "Just handle the art, I'll handle absoulutely everything else",
-    text: '[NO CODE TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
-    label: "What I'm Looking For",
-    text: '[LOOKING FOR TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    label: 'How to Apply',
+    text: 'Use the contact form below. Include a link to your portfolio and a short note about what drew you to the project. That is enough to start a conversation.',
   },
 ];
 
@@ -56,11 +52,10 @@ export const worlds: World[] = [
     images: [
       '/worlds/in-between/1.jpg',
       '/worlds/in-between/2.jpg',
-      '/worlds/in-between/3.jpg',
-      '/worlds/in-between/4.jpg',
+      '/worlds/in-between/3.png',
+      '/worlds/in-between/4.png',
       '/worlds/in-between/5.jpg',
       '/worlds/in-between/6.jpg',
-      '/worlds/in-between/7.jpg',
     ],
   },
 ];
@@ -130,7 +125,7 @@ export const characters: Character[] = [
     cardImage: '/character_header/squibbles_character_profile.png',
     detailImages: ['/character_cards/squibbles/squibbles_char_card.jpg', '/character_cards/squibbles/squibbles_char_card2.png'],
     shortDescription:
-      'His technology runs the city. The same city that spits at him.',
+      'His technology runs the city. The city has never once wondered whose it is.',
     detailDescription:
       '[SQUIBBLES DETAIL TODO] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     characterText:
