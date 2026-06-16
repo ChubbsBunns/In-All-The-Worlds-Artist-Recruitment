@@ -50,7 +50,15 @@ export function CharacterCard({ character }: { character: Character }) {
       </Card>
 
       <CharacterModal
-        character={character}
+        name={character.name}
+        tag={character.role}
+        imageSrc={character.detailImages[0] ?? character.cardImage}
+        secondImageSrc={character.detailImages[1]}
+        characterText={character.characterText}
+        worldText={character.worldText}
+        briefText={character.briefText}
+        freeform={character.freeform}
+        freeformText={character.freeformText}
         opened={opened}
         onClose={() => setOpened(false)}
       />

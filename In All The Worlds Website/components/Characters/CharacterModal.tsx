@@ -1,55 +1,126 @@
 'use client';
 
+import { Fragment } from 'react';
 import Image from 'next/image';
-import { Modal, Stack, Text, Box, SimpleGrid, Badge } from '@mantine/core';
-import type { Character } from '@/data/characters';
+import { Modal, Stack, Text, Box, Badge, Title } from '@mantine/core';
 
 interface Props {
-  character: Character;
+  name: string;
+  tag: string;
+  imageSrc: string;
+  secondImageSrc?: string;
+  characterText: string;
+  worldText: string;
+  briefText: string;
+  freeform?: boolean;
+  freeformText?: string;
   opened: boolean;
   onClose: () => void;
 }
 
-export function CharacterModal({ character, opened, onClose }: Props) {
-  const imageCols = Math.min(character.detailImages.length, 2);
+const CONTENT_BLOCKS = [
+  { label: 'THE CHARACTER', key: 'characterText' as const },
+  { label: 'THE WORLD', key: 'worldText' as const },
+  { label: 'THE BRIEF', key: 'briefText' as const },
+] satisfies { label: string; key: keyof Pick<Props, 'characterText' | 'worldText' | 'briefText'> }[];
+
+export function CharacterModal({
+  name,
+  tag,
+  imageSrc,
+  secondImageSrc,
+  characterText,
+  worldText,
+  briefText,
+  freeform,
+  freeformText,
+  opened,
+  onClose,
+}: Props) {
+  const textByKey = { characterText, worldText, briefText };
 
   return (
     <Modal
       opened={opened}
       onClose={onClose}
-      title={character.name}
+      title={
+        <Stack gap={6}>
+          <Title order={2} size="h3">{name}</Title>
+          <Badge variant="light" size="sm">{tag}</Badge>
+        </Stack>
+      }
       size="lg"
       centered
+      padding="md"
     >
-      <Stack gap="md">
-        <Badge variant="light">{character.role}</Badge>
+      <Stack gap="xl">
+        <Box
+          style={{
+            aspectRatio: '16/9',
+            position: 'relative',
+            backgroundColor: 'light-dark(#e0e0e0, #1e1e2e)',
+            borderRadius: 'var(--mantine-radius-sm)',
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            src={imageSrc}
+            alt={name}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw, 672px"
+          />
+        </Box>
 
-        {character.detailImages.length > 0 && (
-          <SimpleGrid cols={{ base: 1, sm: imageCols }}>
-            {character.detailImages.map((src, i) => (
-              <Box
-                key={i}
-                style={{
-                  aspectRatio: '3/2',
-                  position: 'relative',
-                  backgroundColor: 'light-dark(#e0e0e0, #1e1e2e)',
-                  borderRadius: 'var(--mantine-radius-sm)',
-                  overflow: 'hidden',
-                }}
-              >
-                <Image
-                  src={src}
-                  alt={`${character.name} detail ${i + 1}`}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, 500px"
-                />
-              </Box>
+        {freeform && freeformText ? (
+          <Stack gap="md">
+            {freeformText.split('\n\n').map((para, i) => (
+              <Text key={i} size="md" lh={1.7} ta="center">
+                {para}
+              </Text>
             ))}
-          </SimpleGrid>
+          </Stack>
+        ) : (
+          <Stack gap="xl">
+            {CONTENT_BLOCKS.map(({ label, key }, i) => (
+              <Fragment key={label}>
+                <Stack gap={6}>
+                  <Text
+                    size="xs"
+                    fw={700}
+                    tt="uppercase"
+                    c="dimmed"
+                    style={{ letterSpacing: '0.08em' }}
+                  >
+                    {label}
+                  </Text>
+                  <Text size="sm" lh={1.7}>
+                    {textByKey[key]}
+                  </Text>
+                </Stack>
+                {i === 0 && secondImageSrc && (
+                  <Box
+                    style={{
+                      aspectRatio: '16/9',
+                      position: 'relative',
+                      backgroundColor: 'light-dark(#e0e0e0, #1e1e2e)',
+                      borderRadius: 'var(--mantine-radius-sm)',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <Image
+                      src={secondImageSrc}
+                      alt={name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 768px) 100vw, 672px"
+                    />
+                  </Box>
+                )}
+              </Fragment>
+            ))}
+          </Stack>
         )}
-
-        <Text>{character.detailDescription}</Text>
       </Stack>
     </Modal>
   );
